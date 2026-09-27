@@ -1,6 +1,6 @@
 # Privacy Policy — Swipe Shell
 
-**Last updated: 27 September 2026**
+**Last updated: 28 September 2026**
 
 Swipe Shell is an SSH client. It connects your phone to servers that you own or
 have been given access to. This policy describes what the app does with your
@@ -11,8 +11,8 @@ information.
 Swipe Shell has no account, no backend, and no analytics. Nothing you type,
 say, or connect to is sent to us, because there is no "us" to send it to — the
 app has no server of its own. Your data goes to the servers you choose to
-connect to, and nowhere else, with the one exception described under
-**Speech recognition** below.
+connect to, and nowhere else, with the exceptions described under
+**Speech recognition** and **Purchases** below.
 
 ## What is stored on your device
 
@@ -20,9 +20,8 @@ All of the following is stored on your device only:
 
 - **Server details** — hostnames, ports, usernames, and the aliases you give
   them.
-- **Credentials** — passwords and private keys, held in the iOS keychain or the
-  Android Keystore. They are never written to ordinary files, never written to
-  logs, and never displayed in the terminal.
+- **Credentials** — passwords and private keys. They are never written to
+  ordinary files, never written to logs, and never displayed in the terminal.
 - **Host keys** — the fingerprint of each server you've chosen to trust, so the
   app can warn you if it ever changes.
 - **Your settings** — shortcut bar layouts, terminal theme, font size, and
@@ -30,7 +29,14 @@ All of the following is stored on your device only:
 - **Open sessions** — which servers you had connected, so the app can offer to
   reconnect them after it restarts. Terminal output is not saved.
 
-Deleting the app removes all of it.
+All of it is held in the iOS keychain or the Android Keystore-encrypted store,
+marked as belonging to **this device only**. It is left out of iCloud and
+Google backups and is not carried across when you restore or transfer to a new
+phone — on a new device you add your servers again.
+
+Deleting the app removes all of it. iOS keeps keychain entries after an app is
+deleted, so if you reinstall Swipe Shell, it clears anything a previous
+installation left there the first time it opens.
 
 ## What leaves your device
 
@@ -52,9 +58,15 @@ else.
 If you do not want audio processed off-device, use the on-device model.
 
 **Model downloads.** If you choose to download the on-device speech model, the
-app fetches it over HTTPS from the host where it is published. That request
-includes only what any file download includes; no identifier for you or your
-device is attached.
+app fetches it over HTTPS from GitHub, where the open-source speech-recognition
+project publishes it. As with any download, GitHub receives your IP address;
+its handling is covered by GitHub's privacy statement. No identifier for you or
+your device is attached.
+
+**Purchases.** Subscriptions and the lifetime unlock are sold through the App
+Store and Google Play. Apple or Google take the payment and handle your payment
+details under their own privacy policies; Swipe Shell never sees them. The app
+receives only whether your purchase is active.
 
 ## What is not collected
 
@@ -67,6 +79,8 @@ tracking of any kind. It does not collect:
 - Usage statistics or device identifiers
 
 No data is sold, shared, or disclosed to anyone, because none is collected.
+Because everything is on your device, there is nothing held elsewhere for us to
+access, correct, or delete for you — deleting the app deletes it.
 
 ## Permissions the app asks for
 
@@ -83,11 +97,23 @@ and the app works without any of them.
 
 ## Clipboard
 
-When the app copies something for you — a remote file path after an upload, or
-text you select in the terminal — it goes to your system clipboard. Text copied
-out of the terminal is cleared from the clipboard automatically after a delay
-you can configure, so that terminal output doesn't sit on the pasteboard where
-other apps can read it.
+Text you copy yourself — a selection from the terminal, or a remote file path
+after an upload — goes to your system clipboard and stays there like anything
+else you copy.
+
+A program running on your server can also put text on your clipboard (for
+example, copying from a remote editor). Because that text comes from the server
+rather than from you, Swipe Shell clears it from the clipboard automatically,
+after one minute by default. You can change the delay, or turn clearing off, in
+the app's security settings.
+
+## This website
+
+The Swipe Shell website sets no cookies and runs no analytics. It is hosted on
+Vercel, which keeps standard server logs (such as IP address and browser type)
+to operate the service, and it loads its fonts from Google Fonts, which
+receives your IP address when the page loads. Both are governed by those
+companies' privacy policies.
 
 ## Children
 
