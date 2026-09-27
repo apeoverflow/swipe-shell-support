@@ -127,5 +127,8 @@ notes.
 
 ## Contact
 
-Questions about this policy can be raised as an issue at
-<https://github.com/apeoverflow/swipe-shell-support/issues>.
+For privacy questions or requests, email
+[apeoverflow@proton.me](mailto:apeoverflow@proton.me). General questions can
+also be raised as an issue at
+<https://github.com/apeoverflow/swipe-shell-support/issues>, but issues are
+public — use email for anything you'd rather not post openly.
