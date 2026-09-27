@@ -8,11 +8,12 @@ information.
 
 ## The short version
 
-Swipe Shell has no account, no backend, and no analytics. Nothing you type,
-say, or connect to is sent to us, because there is no "us" to send it to — the
-app has no server of its own. Your data goes to the servers you choose to
-connect to, and nowhere else, with the exceptions described under
-**Speech recognition** and **Purchases** below.
+Swipe Shell has no account, no backend of its own, and no analytics. Nothing
+you type, say, or connect to is sent to us. Your data goes to the servers you
+choose to connect to, and nowhere else, with the exceptions described under
+**Speech recognition** and **Purchases** below. The only records we can see
+are anonymous purchase records, which say that a purchase exists, not who made
+it.
 
 ## What is stored on your device
 
@@ -65,8 +66,26 @@ your device is attached.
 
 **Purchases.** Subscriptions and the lifetime unlock are sold through the App
 Store and Google Play. Apple or Google take the payment and handle your payment
-details under their own privacy policies; Swipe Shell never sees them. The app
-receives only whether your purchase is active.
+details under their own privacy policies; Swipe Shell never sees your name,
+email address, or card details.
+
+To check whether your purchase is active, the app uses
+[RevenueCat](https://www.revenuecat.com/privacy/), a purchase-management
+service. When you start a trial, buy, or restore a purchase, and when the app
+checks your status, RevenueCat receives:
+
+- A random identifier generated on your device for purchase tracking. It is not
+  linked to your name, email, or Apple or Google account, and it is not used
+  for advertising.
+- The receipt or purchase token from the App Store or Google Play, and the
+  resulting purchase history — which product, when, trial and renewal status.
+- Basic technical details needed to process the request: app version,
+  operating-system version, device model, store country, and IP address.
+
+RevenueCat processes this on our behalf only to verify purchases and keep your
+access working. It is not used to track you across apps, and it is not sold.
+It never receives anything about your servers, your credentials, or what you
+do in the terminal.
 
 ## What is not collected
 
@@ -76,11 +95,15 @@ tracking of any kind. It does not collect:
 - Your identity, email address, or any account information
 - Which servers you connect to
 - What you type, run, or transcribe
-- Usage statistics or device identifiers
+- Usage statistics, or advertising and device identifiers
 
-No data is sold, shared, or disclosed to anyone, because none is collected.
-Because everything is on your device, there is nothing held elsewhere for us to
-access, correct, or delete for you — deleting the app deletes it.
+Apart from the anonymous purchase records described under **Purchases**, no
+data is collected, and nothing is sold or shared for advertising.
+
+Your hosts, credentials and settings are only on your device — deleting the app
+deletes them. To ask about or delete your purchase records, email the address
+below with the order ID from your App Store or Google Play receipt; we can remove them from RevenueCat, which
+does not affect your purchase itself.
 
 ## Permissions the app asks for
 
